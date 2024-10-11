@@ -4,7 +4,7 @@ body, html {
     background-color: lightblue;
 }
 
-.content {
+.content {      /*this is a class*/
     margin: 0 auto;
     width: 400px;
 }
