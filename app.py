@@ -22,8 +22,8 @@ def index():
         new_task = Todo(content=task_content) #creating an object of the Todo class
 
         try:
-            db.session.add(new_task) 
-            db.session.commit()
+            db.session.add(new_task) #takes this new object to the session (session is like a staging area for database operations)
+            db.session.commit()      #all the changes in the session (including this new task) are committed to the database. (new table is not created here)
             return redirect('/')
         except:
             return 'There was an issue adding your task'
