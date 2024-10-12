@@ -16,7 +16,7 @@
             <th>Added</th>
             <th>Actions</th>
         </tr>
-        {% for task in tasks %}
+        {% for task in tasks %}    <!--tasks are passed into html file using render_template in app.py-->
             <tr>
                 <td>{{ task.content }}</td>
                 <td>{{ task.date_created.date() }}</td>
@@ -32,8 +32,9 @@
 
     <div class="form">
         <form action="/" method="POST">
-            <input type="text" name="content" id="content">
-            <input type="submit" value="Add Task">
+            <input type="text" name="content" id="content"> 
+            <!-- "content" is unique ID within the html doc (don't confuse with class of the same name)-->
+            <input type="submit" value="Add Task"> <!--value attribute displays itself on the button-->
         </form>
     </div>
 </div>
